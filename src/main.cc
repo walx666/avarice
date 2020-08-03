@@ -39,6 +39,7 @@
 #include <unistd.h>
 #include <netinet/tcp.h>
 #include <fcntl.h>
+#include <iostream>
 
 #include "avarice.h"
 #include "remote.h"
@@ -575,7 +576,7 @@ int main(int argc, char **argv)
     }
 
     if (debugMode)
-      setvbuf(stderr, NULL, _IOLBF, 0);
+      setvbuf(stderr, NULL, _IONBF, 0);
 
     int rv = 0;			// return value from main()
 
@@ -757,8 +758,9 @@ int main(int argc, char **argv)
 	fprintf(stderr, "%s\n", msg);
 	return 1;
       }
-    catch (jtag_exception&)
+    catch (jtag_exception& e)
     {
+        std::cerr << "ERROR: " << e.what() << std::endl;
         // ignored; guarantee theJtagICE object will be deleted
         // correctly, as this says "good-bye" to the JTAG ICE mkII
         rv = 1;

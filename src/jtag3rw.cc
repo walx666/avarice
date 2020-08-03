@@ -21,6 +21,7 @@
  */
 
 
+#include <vector>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -284,7 +285,8 @@ void jtag3::jtagWrite(unsigned long addr, unsigned int numBytes, uchar buffer[])
 	if (numBytes != pageSize)
 	    throw ("jtagWrite(): numByte does not match page size");
     }
-    uchar cmd[14 + numBytes];
+    std::vector<uchar> command(14 + numBytes);
+    uchar* cmd = command.data();
 
     cmd[0] = SCOPE_AVR;
     cmd[1] = CMD3_WRITE_MEMORY;

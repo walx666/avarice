@@ -1,0 +1,36 @@
+.deps/
+autom4te.cache/
+config-aux/
+
+aclocal.m4
+avarice.spec
+autoconf.h
+autoconf.hin
+avarice
+config.log
+config.status
+configure
+ice-gdb
+stamp-h1
+Bootstrap
+Makefile
+Makefile.in
+
+*.o
+
+## Ignore Visual Studio build results
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# Visual Studio cache/options directory
+.vs/

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="1 Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="2 Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="3 Generated Files">
+      <UniqueIdentifier>{b8a0d9c9-3b96-48df-84cd-2afb0050ecb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="4 msvc">
+      <UniqueIdentifier>{5dd6cac7-9017-4c2d-b16a-3784a8479cda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="4 msvc\sys">
+      <UniqueIdentifier>{eea1f628-2e54-49f8-b49e-612b88c16207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="4 msvc\arpa">
+      <UniqueIdentifier>{5165d3a1-bd12-4121-a380-9a8a1b19d6ba}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\autoconf.h">
+      <Filter>2 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\avarice.h">
+      <Filter>2 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crc16.h">
+      <Filter>2 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gnu_getopt.h">
+      <Filter>2 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ioreg.h">
+      <Filter>2 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jtag.h">
+      <Filter>2 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jtag1.h">
+      <Filter>2 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jtag2.h">
+      <Filter>2 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jtag2_defs.h">
+      <Filter>2 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jtag3.h">
+      <Filter>2 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pragma.h">
+      <Filter>2 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\remote.h">
+      <Filter>2 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\msvc\unistd.h">
+      <Filter>4 msvc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\msvc\generated\autoconf.h">
+      <Filter>3 Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\msvc\termios.h">
+      <Filter>4 msvc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\msvc\sys\socket.h">
+      <Filter>4 msvc\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\msvc\sys\time.h">
+      <Filter>4 msvc\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\msvc\sys\wait.h">
+      <Filter>4 msvc\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\msvc\msvc_compat.h">
+      <Filter>4 msvc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\msvc\poll.h">
+      <Filter>4 msvc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\msvc\pthread.h">
+      <Filter>4 msvc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\msvc\arpa\inet.h">
+      <Filter>4 msvc\arpa</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\crc16.c">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\devdescr.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gnu_getopt.c">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gnu_getopt1.c">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ioreg.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag2bp.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag2io.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag2misc.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag2prog.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag2run.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag2rw.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag2usb.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag3bp.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag3io.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag3misc.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag3prog.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag3run.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtag3rw.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtagbp.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtaggeneric.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtagio.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtagmisc.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtagprog.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtagrun.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jtagrw.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\remote.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils.cc">
+      <Filter>1 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\msvc\poll.cpp">
+      <Filter>4 msvc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\msvc\unistd.cpp">
+      <Filter>4 msvc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\msvc\pthread.cpp">
+      <Filter>4 msvc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\msvc\arpa\inet.cpp">
+      <Filter>4 msvc\arpa</Filter>
+    </ClCompile>
+    <ClCompile Include="src\msvc\termios.cpp">
+      <Filter>4 msvc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\msvc\sys\socket.cpp">
+      <Filter>4 msvc\sys</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

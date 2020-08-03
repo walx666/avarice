@@ -21,6 +21,7 @@
  */
 
 
+#include <vector>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -37,7 +38,8 @@
 void jtag3::setJtagParameter(uchar scope, uchar section, uchar item,
 			     uchar *newValue, int valSize)
 {
-  uchar buf[6 + valSize], *resp;
+  std::vector<uchar> buffer(6 + valSize);
+  uchar *buf = buffer.data(), *resp;
 
   buf[0] = scope;
   buf[1] = CMD3_SET_PARAMETER;
