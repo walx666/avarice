@@ -70,7 +70,6 @@
     <ClCompile Include="src\jtagrw.cc" />
     <ClCompile Include="src\main.cc" />
     <ClCompile Include="src\msvc\arpa\inet.cpp" />
-    <ClCompile Include="src\msvc\poll.cpp" />
     <ClCompile Include="src\msvc\pthread.cpp" />
     <ClCompile Include="src\msvc\sys\socket.cpp" />
     <ClCompile Include="src\msvc\termios.cpp" />
@@ -151,7 +150,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>HAVE_CONFIG_H=1;ENABLE_TARGET_PROGRAMMING=0;__STDC__=1;_CRT_DECLARE_NONSTDC_NAMES=1;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_CONFIG_H=1;ENABLE_TARGET_PROGRAMMING=0;__STDC__=1;_CRT_DECLARE_NONSTDC_NAMES=0;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>src\msvc;src\msvc\generated;external\libusb\include;external\libhidapi\include</AdditionalIncludeDirectories>
@@ -164,7 +163,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>HAVE_CONFIG_H=1;ENABLE_TARGET_PROGRAMMING=0;__STDC__=1;_CRT_DECLARE_NONSTDC_NAMES=1;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_CONFIG_H=1;ENABLE_TARGET_PROGRAMMING=0;__STDC__=1;_CRT_DECLARE_NONSTDC_NAMES=0;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>src\msvc;src\msvc\generated;external\libusb\include;external\libhidapi\include</AdditionalIncludeDirectories>
@@ -177,7 +176,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>HAVE_CONFIG_H=1;ENABLE_TARGET_PROGRAMMING=0;__STDC__=1;_CRT_DECLARE_NONSTDC_NAMES=1;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_CONFIG_H=1;ENABLE_TARGET_PROGRAMMING=0;__STDC__=1;_CRT_DECLARE_NONSTDC_NAMES=0;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
       <ConformanceMode>true</ConformanceMode>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -195,7 +194,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>HAVE_CONFIG_H=1;ENABLE_TARGET_PROGRAMMING=0;__STDC__=1;_CRT_DECLARE_NONSTDC_NAMES=1;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_CONFIG_H=1;ENABLE_TARGET_PROGRAMMING=0;__STDC__=1;_CRT_DECLARE_NONSTDC_NAMES=0;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
       <ConformanceMode>true</ConformanceMode>
       <FunctionLevelLinking>true</FunctionLevelLinking>

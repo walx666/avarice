@@ -19,6 +19,3 @@
  */
 
 #pragma once
-#include "sys/socket.h"
-
-int poll(struct pollfd* fds, unsigned int nfds, int timeout);

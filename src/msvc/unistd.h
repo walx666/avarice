@@ -19,10 +19,17 @@
  */
 
 #pragma once
+#include <stdint.h>
+#include <sys/socket.h>
+
+#define O_RDWR 1
+#define O_NOCTTY 0
+#define O_NONBLOCK 0
 
 #define	F_GETFL 3
 #define	F_SETFL 4
 
+typedef intptr_t ssize_t;
 typedef int pid_t;
 
 int usleep(unsigned int us);
@@ -30,4 +37,13 @@ int usleep(unsigned int us);
 pid_t fork(void);
 pid_t setsid(void);
 
+
+int open(const char* pathname, int flags);
+int close(int fd);
 int fcntl(int fd, int cmd, ... /* arg */);
+int select(int nfds, fd_set* readfds, fd_set* writefds, fd_set* exceptfds, const struct timeval* timeout);
+int poll(struct pollfd* fds, unsigned int nfds, int timeout);
+ssize_t read(int fd, void* buffer, size_t count);
+ssize_t write(int fd, const void* buffer, size_t count);
+
+int socketpair(int domain, int type, int protocol, int sv[2]);

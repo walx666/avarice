@@ -22,9 +22,8 @@
 
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
+#define select winsock_select
 #include <winsock2.h>
-#include <afunix.h>
+#undef select
 
 typedef int socklen_t;
-
-int socketpair(int domain, int type, int protocol, int sv[2]);

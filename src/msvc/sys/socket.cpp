@@ -19,6 +19,10 @@
  */
 
 #include "socket.h"
+
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#include <winsock2.h>
 #pragma comment(lib, "ws2_32.lib")
 
 class Sockets
@@ -46,40 +50,3 @@ private:
 };
 
 static Sockets sockets;
-
-static int TranslateSocketError(int error = WSAGetLastError())
-{
-    switch (error)
-    {
-    case WSAEINVAL:
-    case WSA_INVALID_PARAMETER:
-        return EINVAL;
-    case WSA_NOT_ENOUGH_MEMORY:
-        return ENOMEM;
-    case WSAENETDOWN:
-    case WSAENETUNREACH:
-    case WSAENETRESET:
-    case WSAECONNABORTED:
-        return EPIPE;
-    default:
-        return EINVAL;
-    }
-}
-
-static void SetSocketError(int error = WSAGetLastError())
-{
-    errno = TranslateSocketError(error);
-}
-
-int socketpair(int domain, int type, int protocol, int sv[2])
-{
-    auto socket0 = WSASocket(domain, type, protocol, NULL, 0, 0);
-    if (socket0 == INVALID_SOCKET)
-    {
-        SetSocketError();
-        return -1;
-    }
-
-    sv[0] = socket0;
-    return 0;
-}

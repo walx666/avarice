@@ -26,11 +26,6 @@
 #define SIGHUP 1
 #define SIGTRAP 5
 
-#define O_NOCTTY 0
-#define O_NONBLOCK 0
-
-typedef size_t ssize_t;
-
 static inline int strcasecmp(const char* s1, const char* s2) { return _stricmp(s1, s2); }
 static inline int strncasecmp(const char* s1, const char* s2, size_t n) { return _strnicmp(s1, s2, n); }
 

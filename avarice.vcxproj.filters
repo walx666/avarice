@@ -175,9 +175,6 @@
     <ClCompile Include="src\utils.cc">
       <Filter>1 Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\msvc\poll.cpp">
-      <Filter>4 msvc</Filter>
-    </ClCompile>
     <ClCompile Include="src\msvc\unistd.cpp">
       <Filter>4 msvc</Filter>
     </ClCompile>

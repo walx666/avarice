@@ -28,14 +28,14 @@ struct ThreadContext
     void* arguments = nullptr;
 };
 
-static thread_local const ThreadContext* threadContext;
+static thread_local const ThreadContext* g_context;
 
 static void pthread_start_routine_wrapper(void* arguments)
 {
     auto context = static_cast<const ThreadContext*>(arguments);
-    if (threadContext == nullptr)
+    if (g_context == nullptr)
     {
-        threadContext = context;
+        g_context = context;
     }
 
     context->start_routine(context->arguments);
@@ -60,8 +60,8 @@ int pthread_create(pthread_t* thread, const void* attr, void* (*start_routine) (
 
 void pthread_exit(void* retval)
 {
-    delete threadContext;
-    threadContext = nullptr;
+    delete g_context;
+    g_context = nullptr;
 
     _endthreadex(static_cast<unsigned>(reinterpret_cast<uintptr_t>(retval)));
 }
