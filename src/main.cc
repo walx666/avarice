@@ -247,8 +247,14 @@ static void usage(const char *progname)
 	    "HOST_NAME defaults to 0.0.0.0 (listen on any interface).\n"
 	    "\":PORT\" is required to put avarice into gdb server mode.\n\n");
     fprintf(stderr,
-	    "e.g. %s --erase --program --file test.bin --jtag /dev/ttyS0 :4242\n\n",
-	    progname);
+            "Example usage:\n");
+    fprintf(stderr,
+            "\t%s --jtag /dev/ttyS0 :4242\n",
+            progname);
+    fprintf(stderr,
+            "\t%s --dragon :4242\n",
+            progname);
+    fprintf(stderr, "\n");
     exit(0);
 }
 
@@ -576,7 +582,7 @@ int main(int argc, char **argv)
     }
 
     if (debugMode)
-      setvbuf(stderr, NULL, _IONBF, 0);
+      setvbuf(stderr, NULL, _IOLBF, 0);
 
     int rv = 0;			// return value from main()
 
@@ -758,9 +764,8 @@ int main(int argc, char **argv)
 	fprintf(stderr, "%s\n", msg);
 	return 1;
       }
-    catch (jtag_exception& e)
+    catch (jtag_exception&)
     {
-        std::cerr << "ERROR: " << e.what() << std::endl;
         // ignored; guarantee theJtagICE object will be deleted
         // correctly, as this says "good-bye" to the JTAG ICE mkII
         rv = 1;

@@ -363,5 +363,4 @@ class jtag3_io_exception: public jtag_io_exception
 
     unsigned int get_response(void) { return response_code; }
 };
-
 #endif

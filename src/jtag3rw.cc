@@ -284,9 +284,13 @@ void jtag3::jtagWrite(unsigned long addr, unsigned int numBytes, uchar buffer[])
 	addr &= ~mask;
 	if (numBytes != pageSize)
 	    throw ("jtagWrite(): numByte does not match page size");
-    }
-    std::vector<uchar> command(14 + numBytes);
-    uchar* cmd = command.data();
+    }   
+    //uchar cmd[14 + numBytes];
+#if _MSC_VER
+    uchar *cmd = new uchar[14 + numBytes];
+#else
+    uchar cmd[14 + numBytes];
+#endif
 
     cmd[0] = SCOPE_AVR;
     cmd[1] = CMD3_WRITE_MEMORY;

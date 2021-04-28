@@ -23,6 +23,18 @@
 
 #include <stdarg.h>
 
+#ifdef _MSC_VER 
+#ifndef __unused
+ #define __unused
+#endif
+#include "msvc\msvc_compat.h"
+#ifndef strcasecmp
+ #define strcasecmp(s1, s2) _stricmp(s1, s2)
+#endif
+#endif
+
+
+
 #include "autoconf.h"
 
 typedef unsigned char uchar;
@@ -41,5 +53,6 @@ void debugOut(const char *fmt, ...);
 void vstatusOut(const char *fmt, va_list args);
 void statusOut(const char *fmt, ...);
 void statusFlush();
+void unknownDevice(unsigned int devid, bool generic = true);
 
 #endif // INCLUDE_AVARICE_H

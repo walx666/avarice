@@ -21,7 +21,6 @@
  *
  * $Id$
  */
-
 #include <stdlib.h>
 #include <string.h>
 #include <termios.h>
@@ -32,6 +31,10 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <signal.h>
+
+#if _MSC_VER
+#include "msvc_compat.h"
+#endif
 
 #include "avarice.h"
 #include "remote.h"
