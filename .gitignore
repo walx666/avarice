@@ -21,6 +21,7 @@ Makefile.in
 ## Ignore Visual Studio build results
 
 # User-specific files
+*.bak
 *.suo
 *.user
 *.userosscache
