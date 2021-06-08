@@ -42,6 +42,7 @@ extern gdb_io_reg_def_type atmega64_io_registers[];
 extern gdb_io_reg_def_type at90can128_io_registers[];
 extern gdb_io_reg_def_type atmega164p_io_registers[];
 extern gdb_io_reg_def_type atmega324p_io_registers[];
+extern gdb_io_reg_def_type atmega324pb_io_registers[];
 extern gdb_io_reg_def_type atmega644_io_registers[];
 extern gdb_io_reg_def_type atmega325_io_registers[];
 extern gdb_io_reg_def_type atmega3250_io_registers[];
@@ -98,6 +99,7 @@ extern gdb_io_reg_def_type atmega32hvb_io_registers[];
 extern gdb_io_reg_def_type atmega32u4_io_registers[];
 extern gdb_io_reg_def_type atmega406_io_registers[];
 extern gdb_io_reg_def_type atmega48p_io_registers[];
+extern gdb_io_reg_def_type atmega4808_io_registers[];
 extern gdb_io_reg_def_type atmega644p_io_registers[];
 extern gdb_io_reg_def_type atmega88p_io_registers[];
 extern gdb_io_reg_def_type attiny167_io_registers[];
@@ -106,5 +108,6 @@ extern gdb_io_reg_def_type attiny48_io_registers[];
 extern gdb_io_reg_def_type attiny88_io_registers[];
 extern gdb_io_reg_def_type atmega128rfa1_io_registers[];
 extern gdb_io_reg_def_type atmega256rfr2_io_registers[];
+extern gdb_io_reg_def_type atxmega16a4u_io_registers[];
 
 #endif /* INCLUDE_IOREG_H */
